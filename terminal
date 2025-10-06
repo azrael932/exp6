@@ -1,24 +1,22 @@
-# (Assuming you have already created the 'beginner_tutorials' package)
+Create a ROS Package
+Open a terminal:
+cd ~/catkin_ws/src
+catkin_create_pkg beginner_tutorials rospy std_msgs geometry_msgs
+cd beginner_tutorials
 
-# 1. Create 'launch' and 'urdf' directories
-cd ~/catkin_ws/src/beginner_tutorials
-mkdir -p launch urdf
+Create URDF and Launch Directories
+mkdir -p urdf launch
 cd urdf
 
-# 2. Create your robot's URDF file
-gedit diff_drive_robot.urdf
-# (Copy the URDF code into the editor and save)
-
-# 3. Create a launch file to start Gazebo, spawn the model, and allow teleop
+Create a Launch File:
 cd ~/catkin_ws/src/beginner_tutorials/launch
 gedit spawn_and_move.launch
-# (Copy the launch file code into the editor and save)
 
-# --- Running the Simulation ---
-# Open a new terminal and source your workspace.
-cd ~/catkin_ws && source devel/setup.bash
 
-# Launch the simulation
+Build the Workspace
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+
+Run the Simulation
 roslaunch beginner_tutorials spawn_and_move.launch
-# Keep the terminal running teleop_twist_keyboard in focus to drive the robot.
-
