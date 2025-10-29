@@ -1,29 +1,22 @@
-1.open gazebo
-2.in Edit- open model editor 
-3.Select cube
-4.Place cube in env
-5.ight click Open link inspector
-6. link 
-height-0.4m z value-pose
-7.Visual and Collision
- x=2m;y=1m;z=0.15m
-8.. Place cylinder
-Roll = 1.507-pose
-9.Visual and Collision
-Radius=0.3m and Length= 0.25m
-10.Select the joint option
-revolute 
-align the cylinder and enter create
-copy and paste for same wheel 
-11. place an sphere
-Visual Collision - Radius=0.2m
-ball as the joint type
-12. select depth camera--Model Database>> http://
-models.gazebosim.
-13.define the joints -create
-14. Add model plugin 
-Plugin name= follower
-Filename = libFollowerPlugin.so
-15.save model “simplediffbot”
-16.Exit model editor
-17.Run the simulator
+1. Open Gazebo
+2. Go to Edit → Model Editor
+3. Add Cube → place in environment
+4. Link Inspector:
+   - Height = 0.4 m (Z pose)
+   - Visual/Collision: X = 2 m, Y = 1 m, Z = 0.15 m
+5. Add Cylinder
+   - Pose → Roll = 1.507
+   - Visual/Collision: Radius = 0.3 m, Length = 0.25 m
+   - Create Revolute Joint, align with cube
+   - Duplicate for opposite wheel
+6. Add Sphere
+   - Visual/Collision: Radius = 0.2 m
+   - Joint Type: Ball
+7. Add Depth Camera → from Model Database (http://models.gazebosim...)
+8. Define all joints → Create
+9. Add Model Plugin:
+   - Name: follower
+   - Filename: libFollowerPlugin.so
+10. Save model as "simplediffbot"
+11. Exit Model Editor
+12. Run the Simulator
